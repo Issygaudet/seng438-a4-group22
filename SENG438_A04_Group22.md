@@ -47,10 +47,10 @@ In this lab, we explored Mutation and GUI testing using automation tools like Pi
 
 # Report all the statistics and the mutation score for each test class
 Mutation Scores from Assignment 03:
-![alt text](image/image.png)
+![alt text](images/image.png)
 
 Mutation Scores from Assignment 04:
-![alt text](image/image-1.png)
+![alt text](images/image-1.png)
 
 # Analysis drawn on the effectiveness of each of the test classes
 **Range Class Tests:**
@@ -64,11 +64,11 @@ Initially, our mutation coverage for `DataUtilitiesTest` was **73%**. Upon revie
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 Equivalent mutants negatively impact mutation score accuracy. In this lab, we calculated mutation score as:
 
-Mutation Score = Total Mutants Killed/All Mutants
+Mutation Score = Total Mutants Killed / All Mutants
 
 However, in an ideal scenario, equivalent mutants should be excluded from this calculation:
 
-Ideal Mutation Score = Total Mutants Killed/ All Non-Equivalent Mutants 
+Ideal Mutation Score = Total Mutants Killed / All Non-Equivalent Mutants 
 
 Equivalent mutants behave identically to the original program, meaning they do not introduce real faults. These mutants cannot be killed, as they do not represent genuine program bugs. Including them in the mutation score calculation artificially lowers the score and misrepresents the effectiveness of the test suite. Detecting equivalent mutants is a challenging and often undecidable problem, usually requiring manual review of survived mutants.
 
