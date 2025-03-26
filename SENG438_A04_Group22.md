@@ -184,7 +184,7 @@ Functionality 8:
    - `Navigation - Backwards and Over Multiple Pages`: Tested by navigating backwards (using back arrow) to verify that the correct page is returned to.
    - `Navigation - Backwards and Over Multiple Pages`: Tested by opening pages in a repeated manner and navigating backwards over multiple pages to verify pages are returned to in the order they were opened.
    
-By using a combination of valid, invalid, and edge-case data to test each functionality, we ensured comprehensive testing of the application. Redundant testing was avoided where unnecessary. For example, in Functionality 4, creating additional tests to add and remove multiple items would have been redundant, as the behavior is effectively the same as adding and removing a single item. Similarly, for Functionality 6, only one test case was required, as there is only one scenario in which a user can log out of an account—after successfully logging in with valid credentials. This approach allowed us to focus on meaningful test cases while avoiding duplication, ensuring efficiency and thoroughness in our testing process.
+By using a combination of valid, invalid, and edge-case data to test each functionality, we ensured comprehensive testing of the application. Redundant testing was avoided where unnecessary. For example, in Functionality 4, creating additional tests to add and remove multiple items would have been redundant, as the behavior is effectively the same as adding and removing a single item. Similarly, for Functionality 6, only one test case was required, as there is only one scenario in which a user can log out of an account—after successfully logging in with valid credentials, as goes for Functionality 7 and 8. This approach allowed us to focus on meaningful test cases while avoiding duplication, ensuring efficiency and thoroughness in our testing process.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
@@ -218,16 +218,24 @@ By using a combination of valid, invalid, and edge-case data to test each functi
 
 # How the team work/effort was divided and managed
 
-Kamand-search 
-spiro-navigation
-dylan-cart
-issy-login
+The team divided the work based on the functionalities being tested, with each member responsible for specific areas of the application. 
+Each team member automated 2 different functionalities of the application under test. Some functionalities required multiple tests for different possible scenarios and test data, and some functionalities were effctively tested with only one test.
+
+Isabelle: Managed the Login and Logout Functionality, ensuring successful login/logout and proper redirection.
+Kamand: Focused on the Search Functionality, including verifying search results and applying filters.
+Spiro: Worked on the Navigation Functionality, ensuring forward and backward navigation between sections worked as expected.
+Dylan: Handled the Cart Functionality, including adding items to the cart, verifying totals, and clearing the cart.
+
+Each member automated their assigned functionalities using Selenium IDE, ensuring that test cases were comprehensive and covered edge cases as needed. Regular team meetings were held to review progress, discuss challenges, and ensure consistency across test cases. 
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
--selenium only accessing items by ID which were instance unqiue thus would not rerun correctly
--login stops working after a few runs
--tests requiring other tests be run before them/ environ met setup in the live site aka the account creation before login and login  before logout , cart needing emptied
+Selenium:
+
+-Dynamic Locators in Selenium: Selenium often accessed elements by unique instance IDs, which caused tests to fail when rerun. To address this, we switched to more robust locators, such as CSS selectors or XPath expressions, to ensure the tests could run consistently.
+-Login Functionality Issues: The login functionality occasionally stopped working after a few runs. This was resolved by waiting for the system to allow usage again but did result in delays for login functionality scripts to be tested and devloped.
+-Test Dependencies: Some tests required other tests to be run beforehand or specific conditions to be met in the live environment. For example account creation was required before testing login functionality, login needed to be completed before testing logout functionality, the cart had to be emptied before testing cart-related functionalities. To manage this, we carefully sequenced the tests and ensured the environment was reset between test runs or added required functionalities to the same tests (ie. login and logout) so that they were always run in order.
+-Selenium Not Autosaving: Selenium IDE does not have an autosave feature, which led to occasional loss of work. To mitigate this, we made it a habit to manually save the project frequently as a .side file.
 
 # Comments/feedback on the lab itself
 A few comments on the lab: we found it to be quite interesting and introduced us to new concepts. None of us had ever used these technologies for testing before. However, as a group, we felt it would have been more exciting to work with new classes rather than the same `Range` and `DataUtilities` classes from Assignments 2 and 3. Providing additional details on setting up the new software used for this assignment, perhaps in the form of short tutorial videos, could have been useful. Overall, we enjoyed this lab as a group.
