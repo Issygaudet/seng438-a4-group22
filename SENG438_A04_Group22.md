@@ -218,6 +218,10 @@ By using a combination of valid, invalid, and edge-case data to test each functi
 
 # How the team work/effort was divided and managed
 
+Kamand-search 
+spiro-navigation
+dylan-cart
+issy-login
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
