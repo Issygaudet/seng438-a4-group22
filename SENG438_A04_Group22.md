@@ -105,75 +105,125 @@ Mutation testing is essential because traditional coverage metrics alone do not 
 
 # Explain your SELENUIM test case design process
 
-Our Selenium test case design process involved automating two distinct functionalities per team member for the selected application under test. The functionalities were chosen to cover key user interactions and sequences of events on the website. Each functionality was broken down into 2 unique test cases, ensuring that all possible scenarios were covered for a total of 8 functionalities. We selected the Home Depot page. Below is the breakdown of the 8 test cases:
+Our Selenium test case design process involved automating two distinct functionalities per team member for the selected application under test. The functionalities were chosen to cover key user interactions and sequences of events on the website and each group member had 2 functionalities with a related task (eg logging into and logging out of the system - seperate functionalities with high relation). Each larger functionality was broken down into 2 unique functionalities, and then further broken down into seperate test cases with different test data, ensuring that all possible scenarios were covered for a total of 8 functionalities. We selected the Home Depot page. Below is the breakdown of the 8 functionalities:
 
 1. **Search Functionality**:
-   - **Test 1**: Searching for a product and verifying that the search results page loads correctly.
-   - **Test 2**: Filtering the search results using 'Filter by' functionality and making a selection and verifying that the filtered results are displayed.
+   - **Functionality 1**: Searching for a product and verifying that the search results page loads correctly.
+   - **Functionality 2**: Filtering the search results using 'Filter by' functionality and making a selection and verifying that the filtered results are displayed.
 
 2. **Cart Functionality**:
-   - **Test 3**: Adding multiple items to the cart and verifying that the total price is calculated correctly.
-   - **Test 4**: Clearing the cart and verifying that it is empty.
+   - **Functionality 3**: Adding items to the cart and verifying that the product is correctly added to the cart/ the total price is calculated correctly.
+   - **Functionality 4**: Clearing the cart and verifying that it is empty.
 
 3. **Create Account and Login Functionality**:
-   - **Test 5**: Logging in with valid credentials and verifying that the user is redirected to their account page.
-   - **Test 6**: Logging out and verifying that the user is redirected to the homepage.
+   - **Functionality 5**: Logging in with valid credentials and verifying that the user is redirected to their account page.
+   - **Functionality 6**: Logging out and verifying that the user is redirected to the homepage.
 
 4. **Navigation Functionality**:
-   - **Test 7**: Navigating between sections both forward and backwards and verifying that the correct page is loaded.
-   - **Test 8**: Selecting a product category ('Shop by Department') and verifying that the correct category page is displayed.
+   - **Functionality 7**: Navigating between sections forward and verifying that the correct page is loaded.
+   - **Functionality 8**: Navigating between sections backwards and verifying that the correct page is returned to.
 
-The test cases were automated using Selenium WebDriver, and the Page Object Model (POM) was implemented to improve maintainability and reusability. Each test case included assertions and checkpoints to validate the expected outcomes, such as verifying page titles, element visibility, and error messages.
+The test cases were automated using Selenium IDE, a record-and-playback tool, to simplify the process of creating and executing test scripts. When necessary we meeded to use the browser's developer tools to inspect elements and ensure accurate locators for interacting with the application's components. Each test case included assertions and checkpoints to validate the expected outcomes, such as verifying page titles, element visibility, and error messages. This approach allowed for efficient test creation while ensuring the reliability of the automated tests.
 
 # Explain the use of assertions and checkpoints
 
-Assertions and checkpoints were used to validate the outcomes of our automated tests and ensure that the application behaved as expected at each step. Below is how they were applied:
+Assertions and checkpoints were essential in validating the outcomes of our automated tests and ensuring that the application behaved as expected at each step. Below is how they were applied in the context of the functionalities we tested:
 
-1. **Assertions**:
-   - `assertEquals`: Used to compare expected and actual values, such as page titles or specific text on the page.
-   - `assertTrue`: Used to verify conditions, such as the visibility of specific elements or the presence of a success message.
+1. **Assertions**
 
-2. **Checkpoints**:
-   - Verifying that the search results page loads correctly after entering a query.
-   - Ensuring that the cart updates correctly after adding or removing items.
-   - Checking that the user is redirected to the correct page after logging in or logging out.
-   - Confirming that navigation links lead to the correct sections of the website.
+Assertions were used to compare expected and actual values to confirm that specific conditions were met. Some of the assertions we used and how we used them:
 
-These mechanisms ensured that the tests were reliable and that any deviations from expected behavior were detected.
+  - `assert text`: Used to verify that the name of an item added to the cart matched the name displayed in the cart. Ensured that the total price in the cart was calculated correctly after adding multiple items.
+  - `assert title`: Used to confirm that the correct page was loaded after specific actions, such as logging in or navigating between sections.
+  - `assertElementPresent`: Used to verify the presence of critical elements, such as the "View Cart" button or error messages for invalid login attempts.
+
+2. **Checkpoints**
+
+Checkpoints were used to validate intermediate steps in workflows, ensuring that the application behaved as expected at key points. Some of the checkpoints used and how we used them:
+
+  - `Search Functionality`: Verifying that the search results page loaded correctly after entering a query. Ensuring that applying filters to search results displayed the correct filtered items.
+  - `Cart Functionality`: Confirming that the cart updated correctly after adding or removing items. Verifying that the cart displayed the correct total price after adding multiple items.
+  - `Login/Logout Functionality`: Checking that the user was redirected to their account page after logging in with valid credentials. Ensuring that the user was redirected to the homepage after logging out.
+  - `Navigation Functionality`: Verifying that forward navigation led to the correct sections of the website. Ensuring that backward navigation returned the user to the correct previous pages.
+
+By incorporating assertions and checkpoints at critical points in the test cases, we were able to detect deviations from expected behavior early in the workflow, validate that the application handled edge cases (eg. invalid login credentials, empty cart) correctly and thus ensure that the user experience was consistent and reliable across different functionalities.
 
 # how did you test each functionaity with different test data
 
-Each functionality was tested with a variety of data sets to ensure robustness and reliability. Below is how different test data was applied:
+Each functionality was tested with a variety of data sets to ensure robustness and reliability. Below is how different test data was applied for each functionality. Note, some functionalities required 2/3 tests to fully test, and some only required 1 as there is only 1 case in which that functionality would be realistically presented and exercised.
 
 1. **Search Functionality**:
-   - Tested with valid inputs (eg. "fridge") to verify that relevant results are displayed.
-   - Tested with invalid inputs (eg. "xyz123") to verify that an appropriate "No results found" or similar message is displayed.
-   - Tested with edge cases, such as empty input or excessively long strings, to ensure the system handles well.
+Functionality 1:
+   - `Search with Valid Input`: Tested with valid inputs (eg. "fridge") to verify that relevant results are displayed.
+   - `Search with Invalid Input`: Tested with invalid inputs (eg. "xyz123") to verify that an appropriate "No results found" or similar message is displayed.
+Functionality 2:
+   - `Search with Single Filter`: Tested with applying one filter to search results to verify results are correctly limited.
+   - `Search with Multiple Filters`: Testing with applying multiple filters to search results to verify results are correctly limited.
 
 2. **Cart Functionality**:
-   - Tested by adding a single item and verifying the cart contents.
-   - Tested by adding multiple items and verifying the total price calculation.
-   - Tested by removing items and ensuring the cart updates correctly.
+Environment Setup: These tests must be performed on an empty cart. The test environment requires the cart is initially empty so that the system can correctly verify the text inside the cart is correct.
+Functionality 3:
+   - `Add Single Item to Cart`: Tested by adding a single item and verifying the cart contents.
+   - `Add Multiple Items to Cart`: Tested by adding multiple items and verifying the total price calculation.
+Functionality 4:
+   - `Add and Remove Single Item from Cart`: Tested by adding and then removing an item and ensuring the cart updates correctly.
 
 3. **Login Functionality**:
-   - Tested with valid credentials to verify successful login and redirection to the account page.
-   - Tested with invalid credentials to verify that an error message is displayed.
-   - Tested with empty fields to ensure appropriate validation messages are shown.
+Environment Setup: These test cases use test cases: `Create Account 1` and `Create Account 2`. The order in which these are run respective to one another matter. Logging out of an account may also be required to run these. These tests will not be able to perform correctly through Selenium if an account is already logged into the site.
+Functionality 5:
+   - `Log In With Valid Credentials`: Tested with valid credentials to verify successful login and redirection to the account page.
+   - `Log In With Invalid Credentials`: Tested with invalid credentials to verify that an error message is displayed.
+   - `Log In With Error Credentials`: Tested with edge case fields (single digits, invalid email) to ensure appropriate error messages are shown.
+Functionality 6:
+   - `Log In With Valid Credentials and Log out`: Tested log out from valid log in.
 
 4. **Navigation Functionality**:
-   - Tested by navigating to valid sections and verifying that the correct page loads.
-   - Tested by navigating backwards (using back arrow) to verify that the correct page is returned to.
-   - Tested by clicking on category links and verifying that the correct category page is displayed.
+Functionality 7:
+   - `Navigation - Forward Only`: Tested by navigating to valid sections and verifying that the correct page loads.
+Functionality 8:
+   - `Navigation - Backwards and Over Multiple Pages`: Tested by navigating backwards (using back arrow) to verify that the correct page is returned to.
+   - `Navigation - Backwards and Over Multiple Pages`: Tested by opening pages in a repeated manner and navigating backwards over multiple pages to verify pages are returned to in the order they were opened.
    
-
-By using a combination of valid, invalid, and edge-case data to test each functionality, we ensured that the application was tested comprehensively.
+By using a combination of valid, invalid, and edge-case data to test each functionality, we ensured comprehensive testing of the application. Redundant testing was avoided where unnecessary. For example, in Functionality 4, creating additional tests to add and remove multiple items would have been redundant, as the behavior is effectively the same as adding and removing a single item. Similarly, for Functionality 6, only one test case was required, as there is only one scenario in which a user can log out of an account—after successfully logging in with valid credentials. This approach allowed us to focus on meaningful test cases while avoiding duplication, ensuring efficiency and thoroughness in our testing process.
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
+
+### Advantages of Selenium 
+1. **Cross-Browser Support**: Selenium supports multiple browsers like Chrome, Firefox, Edge, and Safari.
+2. **Programming Language Support**: Allows writing test scripts in various languages such as Java, Python, C#, and JavaScript (for this lab we used the IDE only), but also allows to export in multiple languages straight from simple statements.
+3. **Dynamic Web Testing**: Handles dynamic web elements and asynchronous content effectively.
+4. **Integration with CI/CD**: Easily integrates with CI/CD pipelines for automated testing.
+5. **Community Support**: Selenium has a large community and extensive documentation.
+6. **Pretty Intuitive**: Easy to set up and use, especially for non-programmers. Selenium IDE simply is a download in your browser and most operations are pretty easy to understand.
+7. **Can write tests without programming**: Selenium IDE eliminates the need for programming, which is helpful for testers who may not have a strong coding background.
+
+### Disadvantages of Selenium
+1. **Steep Learning Curve**: Requires programming knowledge and familiarity with web technologies - we needed to use inspect frequently to more accuractely access some elements.
+2. **No Built-in Reporting**: Needs third-party tools for reporting test results. Provides simple pass/fail.
+3. **Limited Desktop Application Testing**: Selenium is designed for web applications only.
+4. **Maintenance Overhead**: Test scripts can break if the web application changes frequently.
+5. **No autosave**: Must explicitly save the tests as a new file each time youd like to update saved tests.
+
+### Advantages of Sikulix
+1. **Image-Based Testing**: Sikulix uses image recognition, making it ideal for testing applications without access to the source code.
+2. **Simple to Use**: Easy to set up and use, especially for non-programmers.
+3. **Cross-Platform**: Works on Windows, macOS, and Linux.
+4. **Desktop Application Testing**: Can test desktop applications and GUI elements.
+
+### Disadvantages of Sikulix
+1. **Performance Issues**: Image recognition can be slow and resource-intensive.
+2. **Fragile Tests**: Tests can fail if the UI appearance changes (e.g., color, size, or position).
+3. **Limited Web Testing**: Not as robust as Selenium for web application testing.
+4. **No Built-in CI/CD Integration**: Requires additional effort to integrate with CI/CD pipelines.
 
 # How the team work/effort was divided and managed
 
 
 # Difficulties encountered, challenges overcome, and lessons learned
+
+-selenium only accessing items by ID which were instance unqiue thus would not rerun correctly
+-login stops working after a few runs
+-tests requiring other tests be run before them/ environ met setup in the live site aka the account creation before login and login  before logout , cart needing emptied
 
 # Comments/feedback on the lab itself
 A few comments on the lab: we found it to be quite interesting and introduced us to new concepts. None of us had ever used these technologies for testing before. However, as a group, we felt it would have been more exciting to work with new classes rather than the same `Range` and `DataUtilities` classes from Assignments 2 and 3. Providing additional details on setting up the new software used for this assignment, perhaps in the form of short tutorial videos, could have been useful. Overall, we enjoyed this lab as a group.
