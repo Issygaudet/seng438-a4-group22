@@ -230,12 +230,17 @@ Each member automated their assigned functionalities using Selenium IDE, ensurin
 
 # Difficulties encountered, challenges overcome, and lessons learned
 
-Selenium:
+**Selenium:**
 
--Dynamic Locators in Selenium: Selenium often accessed elements by unique instance IDs, which caused tests to fail when rerun. To address this, we switched to more robust locators, such as CSS selectors or XPath expressions, to ensure the tests could run consistently.
--Login Functionality Issues: The login functionality occasionally stopped working after a few runs. This was resolved by waiting for the system to allow usage again but did result in delays for login functionality scripts to be tested and devloped.
--Test Dependencies: Some tests required other tests to be run beforehand or specific conditions to be met in the live environment. For example account creation was required before testing login functionality, login needed to be completed before testing logout functionality, the cart had to be emptied before testing cart-related functionalities. To manage this, we carefully sequenced the tests and ensured the environment was reset between test runs or added required functionalities to the same tests (ie. login and logout) so that they were always run in order.
--Selenium Not Autosaving: Selenium IDE does not have an autosave feature, which led to occasional loss of work. To mitigate this, we made it a habit to manually save the project frequently as a .side file.
+- Dynamic Locators in Selenium: Selenium often accessed elements by unique instance IDs, which caused tests to fail when rerun. To address this, we switched to more robust locators, such as CSS selectors or XPath expressions, to ensure the tests could run consistently.
+- Login Functionality Issues: The login functionality occasionally stopped working after a few runs. This was resolved by waiting for the system to allow usage again but did result in delays for login functionality scripts to be tested and devloped.
+- Test Dependencies: Some tests required other tests to be run beforehand or specific conditions to be met in the live environment. For example account creation was required before testing login functionality, login needed to be completed before testing logout functionality, the cart had to be emptied before testing cart-related functionalities. To manage this, we carefully sequenced the tests and ensured the environment was reset between test runs or added required functionalities to the same tests (ie. login and logout) so that they were always run in order.
+- Selenium Not Autosaving: Selenium IDE does not have an autosave feature, which led to occasional loss of work. To mitigate this, we made it a habit to manually save the project frequently as a .side file.
+
+**PiTest:**
+- Long Execution Time: PiTest took an excessive amount of time — sometimes over 15 minutes — to generate mutation test reports, often appearing to freeze. Initially, I mistakenly terminated the process, assuming it was unresponsive. Over time, I realized patience was required, as the high CPU and RAM usage were expected.
+
+- Overwhelming Console Errors: PiTest initially flooded the console with errors, making debugging difficult. Understanding the output format took time due to the lack of clear documentation. Eventually, I learned to navigate and interpret the mutation reports effectively.
 
 # Comments/feedback on the lab itself
 A few comments on the lab: we found it to be quite interesting and introduced us to new concepts. None of us had ever used these technologies for testing before. However, as a group, we felt it would have been more exciting to work with new classes rather than the same `Range` and `DataUtilities` classes from Assignments 2 and 3. Providing additional details on setting up the new software used for this assignment, perhaps in the form of short tutorial videos, could have been useful. Overall, we enjoyed this lab as a group.
