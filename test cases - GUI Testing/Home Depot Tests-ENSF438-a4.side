@@ -1,0 +1,1705 @@
+{
+  "id": "ce7dff9c-6df8-45bf-9a8b-a3ed50433aca",
+  "version": "2.0",
+  "name": "Home Depot Tests-ENSF438-a4",
+  "url": "https://www.homedepot.ca",
+  "tests": [{
+    "id": "85c37dd0-f780-4700-993c-170b834686f5",
+    "name": "Search with Valid Input",
+    "commands": [{
+      "id": "bfaca5d6-2408-41b0-9282-f27d3b721529",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1e36265-0246-4bfc-91ab-5608a7225502",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bbf171e-ac08-4114-a2aa-ff16ee6d3829",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e055fdf8-2699-491c-8761-5cf1da3628a2",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fridge"
+    }, {
+      "id": "43d12755-51ae-4dac-83a3-746e65550845",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='Submit Search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9cf636d-a1f2-4bd4-b379-9f3b21f88b77",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//h1[contains(.,'Refrigerators')]",
+      "targets": [
+        ["css=.hdca-cms-title--is-h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Refrigerators')]", "xpath:innerText"]
+      ],
+      "value": "Refrigerators"
+    }]
+  }, {
+    "id": "61ada7bf-a660-48ed-ad0d-3554e5f0cf87",
+    "name": "Search with Invalid Input ",
+    "commands": [{
+      "id": "e2b4284a-5cbc-4f28-b415-0836f3adb62b",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "877783bf-af9f-4d13-82b9-9dc390d44eb8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d23dd4a8-0336-42bc-8e7e-7e2c2b70275f",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dd0caaa-14f0-4db2-916c-433abf99d57d",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "!"
+    }, {
+      "id": "aa112ae8-8bed-4cf4-81eb-2358627cce33",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='Submit Search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "176a4571-d275-48e7-a639-eec01f14b338",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//span[contains(text(), \"We’re sorry, we found 0 result\")]",
+      "targets": [
+        ["css=.hdca-cms-title--is-h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Refrigerators')]", "xpath:innerText"]
+      ],
+      "value": "We’re sorry, we found 0 result for \"!\""
+    }]
+  }, {
+    "id": "fe88d1d9-fd0a-4c16-9605-5fff6625acad",
+    "name": "Add Single Item to Cart",
+    "commands": [{
+      "id": "40bb8839-44e0-48f3-9ffd-55ab506b3e18",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "322771f4-cee3-40fb-a9ea-2bc3c16ab562",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ff72f02-d331-48c1-8597-3cc65d5f653e",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [],
+      "value": "toaster"
+    }, {
+      "id": "974f2eb2-a56f-4974-a68e-e7f838a01bef",
+      "comment": "",
+      "command": "click",
+      "target": "\txpath=//span[text()='Submit Search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3547780-4c23-4983-a864-62c0226912ff",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.acl-product-card:nth-child(1) > .acl-product-card__cta--bottom button",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8a651aed-453a-4517-9c3f-73a428d013a6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.acl-product-card:nth-child(1) .acl-product-card__title-link",
+      "targets": [
+        ["linkText=Salton Salton Digital Toaster Long Slot - 4 Slice", "linkText"],
+        ["css=.acl-product-card:nth-child(1) .acl-product-card__title-link", "css:finder"],
+        ["xpath=(//a[contains(@href, '/product/salton-salton-digital-toaster-long-slot-4-slice/1001840638')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "itemName"
+    }, {
+      "id": "85950d7d-1ad3-495d-81db-506d2d24cee8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-product-card:nth-child(1) > .acl-product-card__cta--bottom button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e1000d3-a3a0-48b8-b81b-4de9a5310705",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='View Cart']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cd15bb0d-6917-494f-a947-49e6a131640e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-line-limit--3",
+      "targets": [
+        ["css=.acl-line-limit--3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "${itemName}"
+    }]
+  }, {
+    "id": "75571f1b-9ee6-443c-a662-68b682b0d4bb",
+    "name": "Navigation - Forward Only",
+    "commands": [{
+      "id": "469a079e-d59f-4215-a01f-e46626cc0008",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83dd924c-fd58-43c6-9689-ee2a39fc041c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c28e34d8-6314-4e09-ac88-e5f4dca40292",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Home Improvement, Home Renovation, Tools, & Hardware - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbf72a78-0f55-43fb-a8b4-fab01e35c24a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#RoomMainNavNodeContainer .acl-main-nav-item__label",
+      "targets": [
+        ["css=#RoomMainNavNodeContainer .acl-main-nav-item__label", "css:finder"],
+        ["xpath=//acl-main-nav-item[@id='RoomMainNavNodeContainer']/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/acl-main-nav-item/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop by Room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23261abb-716c-4b88-a918-7c0a4f9b45e8",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Shop by Room: Essentials for Every Room - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc7f1301-06d6-43ed-b16c-cb67f73aad76",
+      "comment": "",
+      "command": "click",
+      "target": "css=#IdeasMainNavNodeContainer .acl-main-nav-item__label",
+      "targets": [
+        ["css=#IdeasMainNavNodeContainer .acl-main-nav-item__label", "css:finder"],
+        ["xpath=//acl-main-nav-item[@id='IdeasMainNavNodeContainer']/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/acl-main-nav-item/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Ideas & How-to')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d234bb79-1dbd-4b4d-b841-e1103db0398f",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Ideas & How-to - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a29a45c1-2b8f-4653-a5ec-6ad89ebcf377",
+      "comment": "",
+      "command": "click",
+      "target": "css=#InstallationServicesMainNavNodeContainer .acl-main-nav-item__label",
+      "targets": [
+        ["css=#InstallationServicesMainNavNodeContainer .acl-main-nav-item__label", "css:finder"],
+        ["xpath=//acl-main-nav-item[@id='InstallationServicesMainNavNodeContainer']/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/acl-main-nav-item/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Home Services')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a76c164f-5757-4857-a659-99eac1df2daf",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Home Services: Installation & Handyman Services | The Home Depot Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67fdf4a6-24c0-4b00-88ea-d3995d19ca9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ValueCentreMainNavNodeContainer .acl-main-nav-item__label",
+      "targets": [
+        ["css=#ValueCentreMainNavNodeContainer .acl-main-nav-item__label", "css:finder"],
+        ["xpath=//acl-main-nav-item[@id='ValueCentreMainNavNodeContainer']/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/acl-main-nav-item/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Specials & Offers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d432410e-8d93-4bc4-b0aa-359decc01921",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Specials & Offers - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "74d8ecab-92dc-46ae-82fb-707ebfd1f7fb",
+    "name": "Navigation - Backwards and Over Multiple Pages",
+    "commands": [{
+      "id": "ec5e81fe-36cf-470f-a4dd-66fe804530cb",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52dcad32-7527-491a-a659-1488d2727a01",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a58d7dd-adb8-47e0-8028-1ca9dad2284c",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Home Improvement, Home Renovation, Tools, & Hardware - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1845d88-1850-4217-8570-0e5d6875fc6a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#RoomMainNavNodeContainer .acl-main-nav-item__label",
+      "targets": [
+        ["css=#RoomMainNavNodeContainer .acl-main-nav-item__label", "css:finder"],
+        ["xpath=//acl-main-nav-item[@id='RoomMainNavNodeContainer']/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/acl-main-nav-item/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop by Room')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27038661-c133-4a20-ae5a-09c6294f1b5a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Shop by Room: Essentials for Every Room - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91af8c44-8de7-477d-a32a-2636f5547197",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back(); ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bbc230d1-9dae-4c1c-ae30-5dd459971dc1",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Home Improvement, Home Renovation, Tools, & Hardware - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98fab2d6-12b3-490d-8da2-f8e5f65f6706",
+      "comment": "",
+      "command": "click",
+      "target": "css=#IdeasMainNavNodeContainer .acl-main-nav-item__label",
+      "targets": [
+        ["css=#IdeasMainNavNodeContainer .acl-main-nav-item__label", "css:finder"],
+        ["xpath=//acl-main-nav-item[@id='IdeasMainNavNodeContainer']/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/acl-main-nav-item/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Ideas & How-to')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e810d2f-2280-45e6-be9c-71ba49229667",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Ideas & How-to - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "560ead3f-8077-41c2-b77c-55cf38ac1bce",
+      "comment": "",
+      "command": "click",
+      "target": "css=#InstallationServicesMainNavNodeContainer .acl-main-nav-item__label",
+      "targets": [
+        ["css=#InstallationServicesMainNavNodeContainer .acl-main-nav-item__label", "css:finder"],
+        ["xpath=//acl-main-nav-item[@id='InstallationServicesMainNavNodeContainer']/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/acl-main-nav-item/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Home Services')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b510c705-a23d-49b7-9fa6-05bf57bf0421",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Home Services: Installation & Handyman Services | The Home Depot Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bf094b3-3f8c-450d-ba73-473d412797bc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back(); ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bb531a7-d802-4986-98d1-a21bb90db0ae",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Ideas & How-to - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc6a9ea0-0a90-43cd-be25-b1db10745d31",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back(); ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a92bb792-2e5b-41b9-946e-a84fc17a5679",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Home Improvement, Home Renovation, Tools, & Hardware - Homedepot.ca",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "faf65e12-ff1b-4d3e-ae28-08add6aad80a",
+    "name": "Search with Single Filter",
+    "commands": [{
+      "id": "06c21e20-b2c3-4468-adba-6d07252f0e0a",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c59806d4-c1ec-4958-bf89-5169d8b7ee73",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43d4dc17-61ac-48ab-a634-06987a689d6f",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3c26191-e766-4d4e-91b4-53eeb8511f99",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "blender"
+    }, {
+      "id": "ee2b6058-2bd5-46a6-b3dc-9570172e5c6f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='Submit Search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a806f08e-db85-41f6-bcbd-8e5a29c04592",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c2848731449-2 > .acl-dropdown__label",
+      "targets": [
+        ["css=.ng-tns-c2848731449-2 > .acl-dropdown__label", "css:finder"],
+        ["xpath=//acl-dropdown[@id='Type1']/div/div/span", "xpath:idRelative"],
+        ["xpath=//acl-dropdown[3]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Type')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb537e35-cbc2-4cac-a56c-e62aff0b7dad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-row:nth-child(1) .hdca-checkbox__faux-checkbox",
+      "targets": [
+        ["css=.acl-row:nth-child(1) .hdca-checkbox__faux-checkbox", "css:finder"],
+        ["xpath=//acl-dropdown[@id='Type1']/div[3]/facet-search-list-shared/div/label/div/span", "xpath:idRelative"],
+        ["xpath=//label/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6731bd08-f9fd-48e8-9a91-e3aacdbd15c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-product-card-group",
+      "targets": [
+        ["css=.acl-product-card-group", "css:finder"],
+        ["xpath=//acl-product-card-group", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f093ffc1-797a-41a0-9ae3-1a407c5181ad",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-chip__label",
+      "targets": [
+        ["css=.acl-chip__label", "css:finder"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": "Type: Personal"
+    }]
+  }, {
+    "id": "95f55642-18b7-4eaf-aed7-476f4cb8f387",
+    "name": "Search with Multiple Filters",
+    "commands": [{
+      "id": "5faf1745-04d9-45a8-bc3e-c85b64b42793",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a0a2ce4-5b4e-40ed-8cce-224a5cd1d927",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "158f2af1-5556-44e2-9b93-36a84d66c90b",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b08f8218-9214-40c6-9d36-1daef2540ba5",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [
+        ["id=id4457", "id"],
+        ["css=#id4457", "css:finder"],
+        ["xpath=//input[@id='id4457']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "blender"
+    }, {
+      "id": "ca54b0e4-0a3d-4049-a9bb-4a708a5c2e92",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='Submit Search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89301530-3134-4d30-b677-b927827789ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c2848731449-2 > .acl-dropdown__label",
+      "targets": [
+        ["css=.ng-tns-c2848731449-2 > .acl-dropdown__label", "css:finder"],
+        ["xpath=//acl-dropdown[@id='Type1']/div/div/span", "xpath:idRelative"],
+        ["xpath=//acl-dropdown[3]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Type')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d4d5448-3137-4bf0-b49d-0340e1151d1d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-row:nth-child(1) .hdca-checkbox__faux-checkbox",
+      "targets": [
+        ["css=.acl-row:nth-child(1) .hdca-checkbox__faux-checkbox", "css:finder"],
+        ["xpath=//acl-dropdown[@id='Type1']/div[3]/facet-search-list-shared/div/label/div/span", "xpath:idRelative"],
+        ["xpath=//label/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6650f2c0-b72e-4c73-a2c8-50b290137441",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-product-card-group",
+      "targets": [
+        ["css=.acl-product-card-group", "css:finder"],
+        ["xpath=//acl-product-card-group", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c18d88c-75e5-4732-8933-60097db73754",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c2848731449-15 > .acl-dropdown__label",
+      "targets": [
+        ["css=.ng-tns-c2848731449-15 > .acl-dropdown__label", "css:finder"],
+        ["xpath=//acl-dropdown[@id='Colour Family2']/div/div/span", "xpath:idRelative"],
+        ["xpath=//acl-dropdown[4]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Colour Family')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e673a18a-09c3-48d4-a1fb-94d4ccd09d3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-row:nth-child(1) .hdca-checkbox__faux-checkbox",
+      "targets": [
+        ["css=.acl-row:nth-child(1) .hdca-checkbox__faux-checkbox", "css:finder"],
+        ["xpath=//acl-dropdown[@id='Colour Family2']/div[3]/facet-search-list-shared/div/label/div/span", "xpath:idRelative"],
+        ["xpath=//label/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c048bd99-b604-4444-9df3-d04090a5696e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-chip:nth-child(2) .acl-chip__label",
+      "targets": [
+        ["css=.acl-chip:nth-child(2) .acl-chip__label", "css:finder"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": "Type: Personal"
+    }, {
+      "id": "df8e7fe7-f3d7-4dfa-b621-908701071c5e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-chip:nth-child(3) .acl-chip__label",
+      "targets": [
+        ["css=.acl-chip:nth-child(3) .acl-chip__label", "css:finder"],
+        ["xpath=//acl-chip[2]/span/span", "xpath:position"]
+      ],
+      "value": "Colour Family: Black"
+    }]
+  }, {
+    "id": "ab380953-ce8a-4a63-bab4-f2743cafd515",
+    "name": "Create Account 1",
+    "commands": [{
+      "id": "5db08780-8d69-46bb-a3ae-350bea7e81b5",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a5dd859-357d-4941-b73d-1984c33fbfbc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4662371-a35f-4ba2-9fe5-a1e5e2176b21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small:nth-child(2)",
+      "targets": [
+        ["css=.acl-ml--x-small:nth-child(2)", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account / Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "864e4903-31b9-41be-8057-3bde92883fca",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create an Account",
+      "targets": [
+        ["linkText=Create an Account", "linkText"],
+        ["css=.acl-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Create an Account')]", "xpath:link"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:void(0)')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create an Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4adb4d83-1d6a-44d7-9b68-05ee4f0b8c1e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-card:nth-child(1) .acl-button__label",
+      "targets": [
+        ["css=.acl-card:nth-child(1) .acl-button__label", "css:finder"],
+        ["xpath=//section/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Personal Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cc4810d-0033-444b-bd66-c387931a286f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input",
+      "targets": [
+        ["id=id1240", "id"],
+        ["css=#id1240", "css:finder"],
+        ["xpath=//input[@id='id1240']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53d08130-0f30-4f3b-9132-1832d9b23073",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input",
+      "targets": [
+        ["id=id2518", "id"],
+        ["css=#id2518", "css:finder"],
+        ["xpath=//input[@id='id2518']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "example fn"
+    }, {
+      "id": "eb93b18f-205e-4c93-985a-8c84b17be206",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input",
+      "targets": [
+        ["id=id7272", "id"],
+        ["css=#id7272", "css:finder"],
+        ["xpath=//input[@id='id7272']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "121acd83-2bbe-485f-9c1d-8ee3a879aa69",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input",
+      "targets": [
+        ["id=id7272", "id"],
+        ["css=#id7272", "css:finder"],
+        ["xpath=//input[@id='id7272']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "example ln"
+    }, {
+      "id": "03820736-76f3-4b1a-b9f2-7860996b0ac4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#create-account-email use",
+      "targets": [
+        ["css=#create-account-email use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f59789e-2978-4661-88ac-7db4cbd97619",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-email']/div[2]/div/input",
+      "targets": [
+        ["id=id7332", "id"],
+        ["css=#id7332", "css:finder"],
+        ["xpath=//input[@id='id7332']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-email']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "exampleemail@gmail.com"
+    }, {
+      "id": "c50d998c-b881-47e2-8520-4dc596638f85",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input",
+      "targets": [
+        ["id=id134", "id"],
+        ["css=#id134", "css:finder"],
+        ["xpath=//input[@id='id134']", "xpath:attributes"],
+        ["xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ae9e661-9ed9-4c2c-a5a6-c30128b4e1e3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input",
+      "targets": [
+        ["id=id134", "id"],
+        ["css=#id134", "css:finder"],
+        ["xpath=//input[@id='id134']", "xpath:attributes"],
+        ["xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1ceb650-f4ca-478c-abf5-fedcf4196e66",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input",
+      "targets": [
+        ["id=id134", "id"],
+        ["css=#id134", "css:finder"],
+        ["xpath=//input[@id='id134']", "xpath:attributes"],
+        ["xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Examplepassword1"
+    }, {
+      "id": "a94460ae-22ec-4467-88ca-2fe828a198a3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input",
+      "targets": [
+        ["id=id8071", "id"],
+        ["css=#id8071", "css:finder"],
+        ["xpath=//input[@id='id8071']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29c248e7-4ebc-442c-a0c1-410dd2a06fa6",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input",
+      "targets": [
+        ["id=id8071", "id"],
+        ["css=#id8071", "css:finder"],
+        ["xpath=//input[@id='id8071']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "T2T 2T2"
+    }, {
+      "id": "f5d81c66-ec1a-4a76-b1f3-1814d2e42f47",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-button--theme--primary > .acl-button__label",
+      "targets": [
+        ["css=.acl-button--theme--primary > .acl-button__label", "css:finder"],
+        ["xpath=//form/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "747d6531-f023-4e0a-8dc2-fce261141fb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-button--theme--secondary > .acl-button__label",
+      "targets": [
+        ["css=.acl-button--theme--secondary > .acl-button__label", "css:finder"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'No Thanks!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9bd6ffb0-fb25-42c8-b803-39d936beec6d",
+    "name": "Create Account 2",
+    "commands": [{
+      "id": "ec5c91a6-6f98-43aa-b41d-d03702fe4514",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b13120ad-9a2c-433b-a2a7-6c132020be3f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7566b212-ec72-4995-8e50-9a63dc8150ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small:nth-child(2)",
+      "targets": [
+        ["css=.acl-ml--x-small:nth-child(2)", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account / Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b1c0956-22e2-47cd-add3-875092432749",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create an Account",
+      "targets": [
+        ["linkText=Create an Account", "linkText"],
+        ["css=.acl-link:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Create an Account')]", "xpath:link"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'javascript:void(0)')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create an Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c6339ae-d246-49a7-8e14-5063ed298743",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-card:nth-child(1) .acl-button__label",
+      "targets": [
+        ["css=.acl-card:nth-child(1) .acl-button__label", "css:finder"],
+        ["xpath=//section/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Create Personal Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94cfaf6c-3862-4319-8909-2b37f692edc1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input",
+      "targets": [
+        ["id=id1240", "id"],
+        ["css=#id1240", "css:finder"],
+        ["xpath=//input[@id='id1240']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4fb2d92-549f-46a8-aabc-38f23aeace1c",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input",
+      "targets": [
+        ["id=id2518", "id"],
+        ["css=#id2518", "css:finder"],
+        ["xpath=//input[@id='id2518']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-first-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "example fn"
+    }, {
+      "id": "3a22b6e1-9485-4bdd-94a6-16917ab3b0d4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input",
+      "targets": [
+        ["id=id7272", "id"],
+        ["css=#id7272", "css:finder"],
+        ["xpath=//input[@id='id7272']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1637e9b-dad8-4faa-a202-ad586e65df12",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input",
+      "targets": [
+        ["id=id7272", "id"],
+        ["css=#id7272", "css:finder"],
+        ["xpath=//input[@id='id7272']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-last-name']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "example ln"
+    }, {
+      "id": "2f2207fc-d3fc-4b11-9467-02be7af2c9b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#create-account-email use",
+      "targets": [
+        ["css=#create-account-email use", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c25ee84-7582-4e61-8374-f7b6d52fd7a2",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-email']/div[2]/div/input",
+      "targets": [
+        ["id=id7332", "id"],
+        ["css=#id7332", "css:finder"],
+        ["xpath=//input[@id='id7332']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-email']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "exampleemail2@gmail.com"
+    }, {
+      "id": "00d83703-8810-4fba-9d13-c4b63fc849c2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input",
+      "targets": [
+        ["id=id134", "id"],
+        ["css=#id134", "css:finder"],
+        ["xpath=//input[@id='id134']", "xpath:attributes"],
+        ["xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b25aca8c-9ffe-43a0-89c4-86fbfa846e95",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input",
+      "targets": [
+        ["id=id134", "id"],
+        ["css=#id134", "css:finder"],
+        ["xpath=//input[@id='id134']", "xpath:attributes"],
+        ["xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d403fd15-3e03-42df-b8ec-8ee4f589de58",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input",
+      "targets": [
+        ["id=id134", "id"],
+        ["css=#id134", "css:finder"],
+        ["xpath=//input[@id='id134']", "xpath:attributes"],
+        ["xpath=//acl-password-container[@id='create-account-password']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Examplepassword2"
+    }, {
+      "id": "c554662c-4df9-484e-9562-a9949c636ece",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input",
+      "targets": [
+        ["id=id8071", "id"],
+        ["css=#id8071", "css:finder"],
+        ["xpath=//input[@id='id8071']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a7730c8-0ff9-4244-869f-cc01813a60f6",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input",
+      "targets": [
+        ["id=id8071", "id"],
+        ["css=#id8071", "css:finder"],
+        ["xpath=//input[@id='id8071']", "xpath:attributes"],
+        ["xpath=//acl-input-container[@id='create-account-postal-code']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "T2T 2T2"
+    }, {
+      "id": "b6b4ce6d-d2e6-475a-b236-fad24146cb37",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-button--theme--primary > .acl-button__label",
+      "targets": [
+        ["css=.acl-button--theme--primary > .acl-button__label", "css:finder"],
+        ["xpath=//form/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01874b2a-3dca-4c0f-a355-c954329a5857",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-button--theme--secondary > .acl-button__label",
+      "targets": [
+        ["css=.acl-button--theme--secondary > .acl-button__label", "css:finder"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'No Thanks!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "99ea26e2-f9e1-492a-abf3-036169b29d4e",
+    "name": "Log in With Valid Credentials",
+    "commands": [{
+      "id": "287ddaf4-c1ac-432c-ab27-e5c35cfad1f1",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3d475a9-62ea-4895-ac8e-fedfdb52360a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9eac3a02-1ff1-4d41-ad62-9ea608d6ca9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small:nth-child(2)",
+      "targets": [
+        ["css=.acl-ml--x-small:nth-child(2)", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account / Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c10207c-2fa5-44a7-a658-ecffc9216948",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input",
+      "targets": [
+        ["id=id365", "id"],
+        ["css=#id365", "css:finder"],
+        ["xpath=//input[@id='id365']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "exampleemail@gmail.com"
+    }, {
+      "id": "454a9870-2064-4a87-8d74-c6daae3a3d1c",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input",
+      "targets": [
+        ["id=id6949", "id"],
+        ["css=#id6949", "css:finder"],
+        ["xpath=//input[@id='id6949']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Examplepassword1"
+    }, {
+      "id": "894b474c-2288-4664-ad41-1591cea85b05",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-in-modal-button > .acl-button__label",
+      "targets": [
+        ["css=.sign-in-modal-button > .acl-button__label", "css:finder"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/button/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af304dba-aad1-4f1d-8cb1-4ce97e5468dc",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//h1[contains(.,'Account Dashboard')]",
+      "targets": [
+        ["css=.acl-mb--large", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Account Dashboard')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "ae064e19-e958-4b09-930d-f65f7a0f32e3",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Account Dashboard | The Home Depot Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c2e6453b-4d76-4fde-8603-691ebff4852f",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e7e12a94-7b56-47ff-a5a7-590d973fc25d",
+    "name": "Log in With Valid Credentials and Log out",
+    "commands": [{
+      "id": "0443877d-a5de-49ce-bb0a-767ae087f70d",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13228ec6-c29d-4b53-a3dd-3906d6a64af1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d30df9b-56d6-438e-855e-4d623e2c009c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small:nth-child(2)",
+      "targets": [
+        ["css=.acl-ml--x-small:nth-child(2)", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account / Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db8a6975-f94f-40ba-a560-b5d489776bed",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input",
+      "targets": [
+        ["id=id365", "id"],
+        ["css=#id365", "css:finder"],
+        ["xpath=//input[@id='id365']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "exampleemail@gmail.com"
+    }, {
+      "id": "6fb81e00-33d0-4438-958f-e778aefc38d7",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input",
+      "targets": [
+        ["id=id6949", "id"],
+        ["css=#id6949", "css:finder"],
+        ["xpath=//input[@id='id6949']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Examplepassword1"
+    }, {
+      "id": "fff36c7f-bf0c-472b-b8a7-b32f96c00c01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-in-modal-button > .acl-button__label",
+      "targets": [
+        ["css=.sign-in-modal-button > .acl-button__label", "css:finder"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/button/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b95ebbd9-dc4f-490c-a3f2-12c384282bbc",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.acl-mb--large",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "11f6c3ce-481a-4bfe-999d-4e70e912948c",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Account Dashboard | The Home Depot Canada",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b55d4daa-0a94-4dcc-b28a-e47330d72d29",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small:nth-child(2)",
+      "targets": [
+        ["css=.acl-ml--x-small:nth-child(2)", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account / Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c57ea66-4935-4fac-8b89-db2c2b11ed93",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small > svg",
+      "targets": [
+        ["css=.acl-ml--x-small > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "95054141-9e6f-42ad-b25c-0b7bbf9f2ba9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-button--is-full-width > .ng-star-inserted",
+      "targets": [
+        ["css=.acl-button--is-full-width > .ng-star-inserted", "css:finder"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-user/div/div[3]/button/span", "xpath:idRelative"],
+        ["xpath=//global-header-account-menu-user/div/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Log Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e083207-cef8-4e16-a191-e5a8600b531e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small > svg",
+      "targets": [
+        ["css=.acl-ml--x-small > svg", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "54f07dec-4493-481c-be20-2e9b1f2fde06",
+    "name": "Log in With Invalid Credentials ",
+    "commands": [{
+      "id": "498edac3-501e-4501-8b1d-034d67fb98e1",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a169a46d-4df8-4f0e-a251-96a48614f585",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d438e88a-b9e1-4d96-a272-4b7e798f11f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small:nth-child(2)",
+      "targets": [
+        ["css=.acl-ml--x-small:nth-child(2)", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account / Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a4d9fdf-96a7-4603-94b8-7726fa1efadb",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input",
+      "targets": [
+        ["id=id365", "id"],
+        ["css=#id365", "css:finder"],
+        ["xpath=//input[@id='id365']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "exampleemail@gmail.com"
+    }, {
+      "id": "e5269940-4e77-4730-abd0-84e9ad58b5a7",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input",
+      "targets": [
+        ["id=id6949", "id"],
+        ["css=#id6949", "css:finder"],
+        ["xpath=//input[@id='id6949']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "WrongPassword"
+    }, {
+      "id": "571ad1a4-3dff-4dd9-8ec9-91e58cb9f581",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-in-modal-button > .acl-button__label",
+      "targets": [
+        ["css=.sign-in-modal-button > .acl-button__label", "css:finder"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/button/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61fb8693-3f64-4b57-bbc1-19cb28c06402",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.acl-mb--large",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c2c18cf4-5c57-4352-b994-e232a58269b6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-alert__message",
+      "targets": [
+        ["css=.acl-alert__message", "css:finder"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/div/section/header/div", "xpath:idRelative"],
+        ["xpath=//section/header/div", "xpath:position"]
+      ],
+      "value": "Incorrect email/password."
+    }]
+  }, {
+    "id": "f163e250-e508-4a84-986b-f132fc5b88e9",
+    "name": "Log in With Error Credentials ",
+    "commands": [{
+      "id": "ee7fb173-361b-48a7-8f73-90f94c0ba593",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "122b8846-692e-4691-9330-7bfde7f452fc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b25caee-cabf-4cb5-8e04-505a72dccaeb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-ml--x-small:nth-child(2)",
+      "targets": [
+        ["css=.acl-ml--x-small:nth-child(2)", "css:finder"],
+        ["xpath=//a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Account / Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "580160ba-0665-4d7b-a171-83ae79d0d2eb",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input",
+      "targets": [
+        ["id=id365", "id"],
+        ["css=#id365", "css:finder"],
+        ["xpath=//input[@id='id365']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-input-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-input-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "InvalidEmail"
+    }, {
+      "id": "d3ba4b69-ac69-4f18-adc2-fdae3e3228b2",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input",
+      "targets": [
+        ["id=id6949", "id"],
+        ["css=#id6949", "css:finder"],
+        ["xpath=//input[@id='id6949']", "xpath:attributes"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/acl-password-container/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//acl-password-container/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "x"
+    }, {
+      "id": "1a378cc0-3220-4ade-87ae-d376e5e330ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-in-modal-button > .acl-button__label",
+      "targets": [
+        ["css=.sign-in-modal-button > .acl-button__label", "css:finder"],
+        ["xpath=//acl-dropdown[@id='global-header-account-menu-dropdown']/div[3]/div/global-header-account-menu-container/global-header-account-menu-guest/div/form/button/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b330ea7-d2d3-495a-b8b1-089a6357a95a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.acl-mb--large",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "f668c343-91ef-4630-9283-e931b5d093d7",
+      "comment": "",
+      "command": "",
+      "target": "css=.acl-alert__message",
+      "targets": [],
+      "value": "Sorry, an unexpected error has occurred. Please try again later."
+    }]
+  }, {
+    "id": "09137710-54d5-4028-9f2e-888d6c443c6c",
+    "name": "Add and Remove Single Item from Cart",
+    "commands": [{
+      "id": "9c246e56-141a-4418-ab73-9bd5cb674927",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8ef135c-d6ac-49de-b984-07d4f0d9558b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abaf64b0-2ea1-472c-a5bb-54f535563b26",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [],
+      "value": "toaster"
+    }, {
+      "id": "70e12d48-8577-498e-be28-8a9091a9eb0f",
+      "comment": "",
+      "command": "click",
+      "target": "\txpath=//span[text()='Submit Search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d81df95-7ced-4818-96fb-27a696f552ff",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.acl-product-card:nth-child(1) > .acl-product-card__cta--bottom button",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4edb3605-5805-4b6e-8890-573edb4dc33e",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.acl-product-card:nth-child(1) .acl-product-card__title-link",
+      "targets": [
+        ["linkText=Salton Salton Digital Toaster Long Slot - 4 Slice", "linkText"],
+        ["css=.acl-product-card:nth-child(1) .acl-product-card__title-link", "css:finder"],
+        ["xpath=(//a[contains(@href, '/product/salton-salton-digital-toaster-long-slot-4-slice/1001840638')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "itemName"
+    }, {
+      "id": "01822de4-f880-46c8-a855-6783f76deb87",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-product-card:nth-child(1) > .acl-product-card__cta--bottom button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fcf191b-0ea3-44eb-8366-388543bbef8f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='View Cart']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "819f02a2-e1f7-4061-a8c5-a6b39053295d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-line-limit--3",
+      "targets": [
+        ["css=.acl-line-limit--3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "${itemName}"
+    }, {
+      "id": "bef3208c-c032-4455-8306-d32798028c45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-underline:nth-child(1)",
+      "targets": [
+        ["css=.acl-underline:nth-child(1)", "css:finder"],
+        ["xpath=//cart-product-actions/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8be671c7-36f6-411c-9330-dbf7454d6f57",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-text-size--medium:nth-child(1)",
+      "targets": [
+        ["css=.acl-text-size--medium:nth-child(1)", "css:finder"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Your cart is empty. Sign in to view previously added items, or browse by department below to start shopping.')]", "xpath:innerText"]
+      ],
+      "value": "Your cart is empty. Sign in to view previously added items, or browse by department below to start shopping."
+    }]
+  }, {
+    "id": "b83bb32a-c8d3-4f75-bf39-ac255ea0e76e",
+    "name": "Add Multiple Items to Cart",
+    "commands": [{
+      "id": "43af7ecb-b0fa-4782-b5ad-be712e70d50e",
+      "comment": "",
+      "command": "open",
+      "target": "/en/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88158bea-3dac-4222-b141-1b973bada9ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x832",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc646554-78f1-44e7-b1b8-567d8e04e165",
+      "comment": "",
+      "command": "type",
+      "target": "css=input[placeholder='What can we help you find?']",
+      "targets": [],
+      "value": "toaster"
+    }, {
+      "id": "d6696753-e545-4b2c-95a6-17beefd01dd8",
+      "comment": "",
+      "command": "click",
+      "target": "\txpath=//span[text()='Submit Search']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6dabad6-5e2e-4a90-95d4-7fe4e9c57689",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.acl-product-card:nth-child(1) > .acl-product-card__cta--bottom button",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "11a17ce8-6423-493e-95be-73db55450b70",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.acl-product-card:nth-child(1) .acl-product-card__title-link",
+      "targets": [
+        ["linkText=Salton Salton Digital Toaster Long Slot - 4 Slice", "linkText"],
+        ["css=.acl-product-card:nth-child(1) .acl-product-card__title-link", "css:finder"],
+        ["xpath=(//a[contains(@href, '/product/salton-salton-digital-toaster-long-slot-4-slice/1001840638')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "itemName1"
+    }, {
+      "id": "fa9ab79c-4de8-476d-8c07-8e7b3e50a8f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-product-card:nth-child(1) > .acl-product-card__cta--bottom button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52192ea7-9630-4ea1-9781-3fbb113bd261",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Continue Shopping')]",
+      "targets": [
+        ["css=.acl-button--size--medium:nth-child(1) > .acl-button__label", "css:finder"],
+        ["xpath=//div[@id='topOfPanelRef']/div[3]/div/div[3]/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Continue Shopping')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bbed6ca-3dec-4b3d-8042-f025a907b76c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.acl-product-card:nth-child(2) .acl-product-card__title-link",
+      "targets": [
+        ["linkText=Salton Salton Digital Toaster Long Slot - 4 Slice", "linkText"],
+        ["css=.acl-product-card:nth-child(1) .acl-product-card__title-link", "css:finder"],
+        ["xpath=(//a[contains(@href, '/product/salton-salton-digital-toaster-long-slot-4-slice/1001840638')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "itemName2"
+    }, {
+      "id": "06e14250-b031-4fd5-920c-b4bf72ace480",
+      "comment": "",
+      "command": "click",
+      "target": "css=.acl-product-card:nth-child(2) > .acl-product-card__cta--bottom > .acl-button",
+      "targets": [
+        ["css=.acl-product-card:nth-child(2) > .acl-product-card__cta--bottom > .acl-button", "css:finder"],
+        ["xpath=//article[2]/section[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea6d39d6-988a-49b2-9def-4de150192a21",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='View Cart']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "607e1696-69fd-44ea-89bd-d8e21d1e4a3f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-line-limit--3",
+      "targets": [
+        ["css=.acl-line-limit--3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "${itemName1}"
+    }, {
+      "id": "8709b269-52a1-4946-8c34-7d3d076247a7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.acl-line-limit--3",
+      "targets": [
+        ["css=.acl-line-limit--3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Salton Salton Digital Toaster Long Slot - 4 Slice')]", "xpath:innerText"]
+      ],
+      "value": "${itemName2}"
+    }]
+  }],
+  "suites": [{
+    "id": "9dfee2cc-f91e-4038-abff-e1302319bb51",
+    "name": "Search Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["85c37dd0-f780-4700-993c-170b834686f5", "61ada7bf-a660-48ed-ad0d-3554e5f0cf87", "faf65e12-ff1b-4d3e-ae28-08add6aad80a", "95f55642-18b7-4eaf-aed7-476f4cb8f387"]
+  }, {
+    "id": "b90614d7-fa77-4b4e-9a90-ce533178c46c",
+    "name": "Cart Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fe88d1d9-fd0a-4c16-9605-5fff6625acad", "b83bb32a-c8d3-4f75-bf39-ac255ea0e76e", "09137710-54d5-4028-9f2e-888d6c443c6c"]
+  }, {
+    "id": "35808ed1-4730-4dd7-82ed-9c9935bd7ff1",
+    "name": "Login Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ab380953-ce8a-4a63-bab4-f2743cafd515", "9bd6ffb0-fb25-42c8-b803-39d936beec6d", "99ea26e2-f9e1-492a-abf3-036169b29d4e", "54f07dec-4493-481c-be20-2e9b1f2fde06", "f163e250-e508-4a84-986b-f132fc5b88e9", "e7e12a94-7b56-47ff-a5a7-590d973fc25d"]
+  }, {
+    "id": "2a41f253-0cca-4736-b98d-de4dfcaea473",
+    "name": "Navigation Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["75571f1b-9ee6-443c-a662-68b682b0d4bb", "74d8ecab-92dc-46ae-82fb-707ebfd1f7fb"]
+  }],
+  "urls": ["https://www.homedepot.ca/"],
+  "plugins": []
+}

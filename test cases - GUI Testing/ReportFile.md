@@ -1,7 +1,40 @@
+All of our automated tests were run and completed successfully with the exception of 'Log In with Valid Credentials and Log Out'. This failure was due to the website not allowing us to run logins and logouts enough times for us to successfully complete the test. These are the run logs:
 
+'Search With Valid Input':
+![alt text](image-1.png)
 
+'Search With Invalid Input':
+![alt text](image-2.png)
 
+'Search with Single Filter':
+![alt text](image-3.png)
 
+'Search with Multiple Filters':
+![alt text](image-4.png)
+
+'Navigation - Forward Only':
+![alt text](image-5.png)
+
+'Navigation - Backwards and Over Multiple Pages':
+![alt text](image-6.png)
+
+'Add Single Item to Cart':
+![alt text](image-7.png)
+
+'Add Multiple Items to Cart':
+![alt text](image-8.png)
+
+'Add and Remove Single Item from Cart':
+![alt text](image-9.png)
+
+'Log in with Valid Credentials':
+![alt text](image-11.png)
+
+'Log In with Invalid Credentials':
+![alt text](image-10.png)
+
+'Log In With Error Credentials':
+![alt text](image.png)
 
 ### Defects Identified During Test Automation
 

@@ -135,7 +135,7 @@ Assertions were used to compare expected and actual values to confirm that speci
 
   - `assert text`: Used to verify that the name of an item added to the cart matched the name displayed in the cart. Ensured that the total price in the cart was calculated correctly after adding multiple items.
   - `assert title`: Used to confirm that the correct page was loaded after specific actions, such as logging in or navigating between sections.
-  - `assertElementPresent`: Used to verify the presence of critical elements, such as the "View Cart" button or error messages for invalid login attempts.
+  - `assert element present`: Used to verify the presence of critical elements, such as the "View Cart" button or error messages for invalid login attempts.
 
 2. **Checkpoints**
 
